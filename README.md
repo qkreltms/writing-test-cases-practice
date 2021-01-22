@@ -2,6 +2,10 @@
 
 You can learn technique of writing test cases by reading this repository when you use `redux`, `axios` and `react-hooks` in `create-react-app`
 
+## Get started
+
+`yarn test:w` or `npm run test:w`
+
 ## Check out these files
 
 1. package.json `jest` property and installed packages

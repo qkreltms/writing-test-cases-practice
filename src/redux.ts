@@ -20,34 +20,29 @@ import {
     source: {message: '', status: ''},
   };
 
-  export const init = () => (
-  {
+  export const init = () => ({
     type: 'INIT',
   })
 
-  export const step1Completed = (source: StepState['source']) => {
-      return {
-          type: "STEP1_COMPLETED",
-          payload: source,
-      }
-  }  
+  export const step1Completed = (source: StepState['source']) => ({
+    type: "STEP1_COMPLETED",
+    payload: source,
+  })
   
-  export const startStep1 = () => {
-    return {
-        type: "START_STEP1",
-    }
-  }
+  export const startStep1 = () => ({
+    type: "START_STEP1",
+  })
 
   export interface MyAction {
     type: string, payload: any 
   }
   
-  export function steps(state = initialState, action: AnyAction & MyAction) {
+  export function steps(state = initialState, action: AnyAction & MyAction): StepState {
     switch (action.type) {
       case "START_STEP1":
-        return { ...state, step1: true } as StepState; 
+        return { ...state, step1: true }
      case "STEP1_COMPLETED": 
-        return { ...state, source: { ...action.payload } } as StepState;
+        return { ...state, source: { ...action.payload } }
       case "INIT":
         return { ...initialState }
       default:
