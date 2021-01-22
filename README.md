@@ -1,6 +1,6 @@
 ## Introduction
 
-You can learn technique of writing test cases by reading this repository when you use `redux`, `axios` and `react-hooks` with `create-react-app`
+You can learn technique of writing test cases by reading this repository when you use `redux`, `axios` and `react-hooks` in `create-react-app`
 
 ## Check out these files
 
